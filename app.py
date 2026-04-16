@@ -12,7 +12,7 @@ st.set_page_config(page_title="XYZ County Accountability Dashboard", layout="wid
 # ========== BRANDING ==========
 # Set the correct path to your logo file
 # Replace "musewe-analytics-logo.png" with your actual file name
-logo_path = Path(__file__).parent / "musewe-analytics-logo.png"
+logo_path = Path(__file__).parent / "musewe_logo.png"
 
 if logo_path.exists():
     st.sidebar.image(str(logo_path), width=150)
