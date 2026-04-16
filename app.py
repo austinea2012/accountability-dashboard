@@ -3,10 +3,25 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
+from pathlib import Path
 
 # ------------------------------
 # Page config
 st.set_page_config(page_title="XYZ County Accountability Dashboard", layout="wide")
+
+# ========== BRANDING ==========
+# Set the correct path to your logo file
+# Replace "musewe-analytics-logo.png" with your actual file name
+logo_path = Path(__file__).parent / "musewe-analytics-logo.png"
+
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=150)
+else:
+    st.sidebar.warning("Logo file not found. Please check the file name and path.")
+st.sidebar.markdown("## Musewe Analytics")
+st.sidebar.markdown("---")
+# ===============================
+
 st.title("🏛️ XYZ County Accountability Dashboard")
 st.markdown("**Linking the County Manifesto → CIDP → Programme Budget**")
 st.markdown("Track pledges, budgets, and performance. *Actuals (spending & physical progress) will be added soon.*")
